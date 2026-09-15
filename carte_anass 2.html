@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ProCard Maroc — Carte de visite digitale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* ======================================================
+   ZONE À PERSONNALISER — modifiez uniquement ce bloc
+   ====================================================== */
+</style>
+<script>
+  // ---- Informations du profil (à personnaliser) ----
+  const PROFILE = {
+    firstName: "Anass",
+    lastName: "BENDAYA",
+    fullNameDisplay: "Anass BENDAYA",
+    title: "Fondateur",
+    company: "ProCard Maroc",
+    tagline: "Cartes de visite digitales, sans papier",
+    phone: "+212 606800360",
+    whatsapp: "+212 606800360",
+    email: "bendayaanas@gmail.com",
+    website: "https://procardmaroc.com",
+    address: "Casablanca, Maroc",
+    initials: "AB",
+    // Réseau (laisser vide "" pour masquer la ligne)
+    linkedin: "https://www.linkedin.com/in/anas-bendaya-4b2617420/"
+  };
+</script>
+</head>
+<body>
+
+<main class="stage">
+  <section class="card" aria-label="Carte de visite">
+    <div class="card__waves" aria-hidden="true">
+      <svg viewBox="0 0 380 200" preserveAspectRatio="none">
+        <path d="M-10 150 C 60 110, 110 190, 180 140 S 300 90, 390 130" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M-10 170 C 60 130, 110 210, 180 160 S 300 110, 390 150" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M-10 190 C 60 150, 110 230, 180 180 S 300 130, 390 170" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M-10 210 C 60 170, 110 250, 180 200 S 300 150, 390 190" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+    </div>
+
+    <div class="card__nfc-badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M9 4v16M9 4a5 5 0 010 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M14 8.2a4 4 0 010 7.6M17 5.6a8 8 0 010 12.8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="card__avatar" id="avatar">DE</div>
+
+    <h1 class="card__name" id="name">Douaa El Amrani</h1>
+    <p class="card__role" id="role">Fondatrice · ProCard Maroc</p>
+    <p class="card__tagline" id="tagline">Cartes de visite digitales, sans papier</p>
+
+    <div class="card__divider" aria-hidden="true"></div>
+
+    <ul class="card__contacts" id="contacts">
+      <li class="contact-row">
+        <a class="contact-link" id="phoneLink" href="tel:+212600000000">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1v3.6c0 .6-.4 1-1 1C10.6 21.2 2.8 13.4 2.8 3.7c0-.6.4-1 1-1H7.4c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.2 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">Téléphone</span>
+            <span class="contact-value" id="phoneText">+212 6 00 00 00 00</span>
+          </span>
+        </a>
+      </li>
+      <li class="contact-row">
+        <a class="contact-link" id="emailLink" href="mailto:contact@procardmaroc.ma">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">E-mail</span>
+            <span class="contact-value" id="emailText">contact@procardmaroc.ma</span>
+          </span>
+        </a>
+      </li>
+      <li class="contact-row">
+        <a class="contact-link" id="linkedinLink" href="#" target="_blank" rel="noopener">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 10v6.5M7.5 7.6v.1M11.5 16.5V13c0-1.4.9-2.4 2.2-2.4 1.3 0 1.8 1 1.8 2.4v3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value" id="linkedinText">linkedin.com/in/douaa-sodki</span>
+          </span>
+        </a>
+      </li>
+      <li class="contact-row">
+        <a class="contact-link" id="siteLink" href="https://procardmaroc.ma" target="_blank" rel="noopener">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">Site web</span>
+            <span class="contact-value" id="siteText">procardmaroc.ma</span>
+          </span>
+        </a>
+      </li>
+      <li class="contact-row">
+        <span class="contact-link contact-link--static">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-11.5A7 7 0 105 9.5C5 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">Localisation</span>
+            <span class="contact-value" id="addressText">Casablanca, Maroc</span>
+          </span>
+        </span>
+      </li>
+    </ul>
+
+    <button class="card__cta" id="downloadBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" class="cta-icon"><path d="M12 4v11m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 18v1.5A1.5 1.5 0 006.5 21h11a1.5 1.5 0 001.5-1.5V18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Ajouter aux contacts
+    </button>
+    <p class="card__hint" id="downloadHint">Compatible iPhone (iOS) et Android</p>
+
+    <p class="card__footer">Propulsé par <strong>ProCard Maroc</strong></p>
+  </section>
+</main>
+
+<style>
+:root{
+  --ink:#122421;
+  --ink-soft:#3c534e;
+  --paper:#F7F4EC;
+  --card-bg:#FFFFFF;
+  --emerald:#134E48;
+  --emerald-deep:#0B3330;
+  --gold:#B8934A;
+  --gold-soft:#E7D9B8;
+  --line:#E4DFD0;
+  --radius-card:28px;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  min-height:100svh;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(19,78,72,0.10), transparent 42%),
+    radial-gradient(circle at 85% 92%, rgba(184,147,74,0.14), transparent 45%),
+    var(--paper);
+  font-family:'Manrope', sans-serif;
+  color:var(--ink);
+  display:flex;
+  -webkit-font-smoothing:antialiased;
+}
+
+.stage{
+  width:100%;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px 18px 48px;
+}
+
+.card{
+  --c-bg-top:#181818;
+  --c-bg-bottom:#040404;
+  --c-fg:#F6F4EC;
+  --c-fg-soft:rgba(246,244,236,0.62);
+  --c-line:rgba(246,244,236,0.12);
+  --c-chip:rgba(246,244,236,0.07);
+
+  position:relative;
+  width:100%;
+  max-width:380px;
+  background:linear-gradient(165deg, var(--c-bg-top) 0%, var(--c-bg-bottom) 100%);
+  border-radius:var(--radius-card);
+  padding:38px 30px 28px;
+  text-align:center;
+  box-shadow:0 1px 2px rgba(0,0,0,0.3), 0 26px 50px -20px rgba(10,10,10,0.55);
+  border:1px solid rgba(255,255,255,0.06);
+  overflow:hidden;
+}
+
+.card__waves{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:150px;
+  color:rgba(255,255,255,0.10);
+  pointer-events:none;
+}
+.card__waves svg{width:100%;height:100%;display:block;}
+
+.card__nfc-badge{
+  position:absolute;
+  top:22px;
+  right:24px;
+  width:26px;
+  height:26px;
+  color:var(--gold-soft);
+  opacity:0.9;
+}
+.card__nfc-badge svg{width:100%;height:100%;}
+
+.card__avatar{
+  position:relative;
+  width:88px;
+  height:88px;
+  margin:6px auto 20px;
+  border-radius:50%;
+  background:linear-gradient(155deg, var(--gold) 0%, #8E6C2C 100%);
+  color:#12100A;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Sora', sans-serif;
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:0.5px;
+  box-shadow:0 0 0 4px var(--c-bg-bottom), 0 0 0 5px rgba(255,255,255,0.14);
+}
+
+.card__name{
+  position:relative;
+  font-family:'Sora', sans-serif;
+  font-weight:800;
+  font-size:25px;
+  line-height:1.15;
+  margin:0 0 6px;
+  color:var(--c-fg);
+}
+
+.card__role{
+  position:relative;
+  margin:0;
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--gold-soft);
+  letter-spacing:0.2px;
+}
+
+.card__tagline{
+  position:relative;
+  margin:10px auto 0;
+  max-width:270px;
+  font-size:13.5px;
+  color:var(--c-fg-soft);
+  line-height:1.5;
+}
+
+.card__divider{
+  position:relative;
+  width:44px;
+  height:2px;
+  background:var(--gold);
+  margin:22px auto 20px;
+  border-radius:2px;
+}
+
+.card__contacts{
+  position:relative;
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  text-align:left;
+}
+
+.contact-row{width:100%;}
+
+.contact-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:11px 12px;
+  border-radius:14px;
+  text-decoration:none;
+  color:inherit;
+  transition:background 0.15s ease;
+}
+.contact-link:not(.contact-link--static):hover,
+.contact-link:not(.contact-link--static):focus-visible{
+  background:var(--c-chip);
+}
+.contact-link:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+
+.contact-icon{
+  flex:none;
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  background:var(--c-chip);
+  border:1px solid var(--c-line);
+  color:var(--gold-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.contact-icon svg{width:18px;height:18px;}
+
+.contact-text{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+.contact-label{
+  font-size:11px;
+  color:var(--c-fg-soft);
+  font-weight:600;
+}
+.contact-value{
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--c-fg);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.card__cta{
+  position:relative;
+  width:100%;
+  margin-top:26px;
+  padding:15px 18px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg, #D8B769 0%, var(--gold) 100%);
+  color:#171205;
+  font-family:'Manrope', sans-serif;
+  font-size:15.5px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  cursor:pointer;
+  transition:transform 0.12s ease, filter 0.15s ease;
+}
+.card__cta:hover{filter:brightness(1.06);}
+.card__cta:active{transform:scale(0.98);}
+.cta-icon{width:18px;height:18px;}
+
+.card__hint{
+  position:relative;
+  margin:10px 0 0;
+  font-size:12px;
+  color:var(--c-fg-soft);
+}
+
+.card__footer{
+  position:relative;
+  margin:22px 0 0;
+  font-size:11.5px;
+  color:var(--c-fg-soft);
+  letter-spacing:0.2px;
+}
+.card__footer strong{color:var(--gold-soft);}
+
+@media (max-width:360px){
+  .card{padding:32px 22px 24px;}
+  .card__name{font-size:23px;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .card__cta{transition:none;}
+}
+
+</style>
+
+<script>
+(function () {
+  // Injecte les infos du profil dans le DOM
+  const el = (id) => document.getElementById(id);
+  el('avatar').textContent = PROFILE.initials;
+  el('name').textContent = PROFILE.fullNameDisplay;
+  el('role').textContent = PROFILE.title + ' · ' + PROFILE.company;
+  el('tagline').textContent = PROFILE.tagline;
+
+  el('phoneLink').href = 'tel:' + PROFILE.phone.replace(/\s+/g, '');
+  el('phoneText').textContent = PROFILE.phone;
+
+  el('emailLink').href = 'mailto:' + PROFILE.email;
+  el('emailText').textContent = PROFILE.email;
+
+  if (PROFILE.linkedin) {
+    el('linkedinLink').href = PROFILE.linkedin;
+    el('linkedinText').textContent = PROFILE.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+  } else {
+    el('linkedinLink').closest('li').remove();
+  }
+
+  el('siteLink').href = PROFILE.website;
+  el('siteText').textContent = PROFILE.website.replace(/^https?:\/\//, '');
+
+  el('addressText').textContent = PROFILE.address;
+
+  // ---- Génération de la vCard (.vcf), compatible iOS & Android ----
+  function buildVCard(p) {
+    const cleanPhone = p.phone.replace(/[^\d+]/g, '');
+    const lines = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:' + p.lastName + ';' + p.firstName + ';;;',
+      'FN:' + p.fullNameDisplay,
+      'ORG:' + p.company,
+      'TITLE:' + p.title,
+      'TEL;TYPE=CELL:' + cleanPhone,
+      'EMAIL;TYPE=INTERNET:' + p.email,
+      'URL:' + p.website,
+      'ADR;TYPE=WORK:;;' + p.address + ';;;;',
+      'NOTE:' + p.tagline,
+      'END:VCARD'
+    ];
+    return lines.join('\r\n');
+  }
+
+  el('downloadBtn').addEventListener('click', function () {
+    const vcard = buildVCard(PROFILE);
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const filename = (PROFILE.firstName + '-' + PROFILE.lastName).replace(/\s+/g, '_') + '.vcf';
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // iOS Safari ouvre généralement directement l'aperçu "Ajouter aux contacts"
+    // depuis ce téléchargement ; Android propose d'ouvrir avec l'app Contacts.
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  });
+})();
+</script>
+
+</body>
+</html>
